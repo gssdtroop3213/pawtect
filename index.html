@@ -165,9 +165,10 @@
   .sidebar-body { padding: 1rem; }
   .sidebar-body h4 {
     font-family: 'Fredoka One', cursive;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     color: var(--teal-dark);
-    margin: 0.85rem 0 0.4rem;
+    margin: 1rem 0 0.4rem;
+    letter-spacing: 0.02em;
   }
   .sidebar-body h4:first-child { margin-top: 0; }
 
@@ -645,35 +646,55 @@
   <!-- SIDEBAR -->
   <aside class="sidebar" id="resources">
 
-    <!-- LOCAL RESOURCES -->
-    <div class="sidebar-card">
+    <!-- RESOURCES -->
+    <div class="sidebar-card" id="resources">
       <div class="sidebar-header">
-        <span class="sidebar-icon">📍</span>
-        <span class="sidebar-title">Local Resources</span>
+        <span class="sidebar-icon">🔗</span>
+        <span class="sidebar-title">Resources</span>
       </div>
       <div class="sidebar-body">
-        <div class="sidebar-placeholder">
-          <strong>✏️ Add local wildlife reserve info</strong>
-          Name, website, and ranger contact for your local reserve or open space partner.
-        </div>
-        <div class="sidebar-placeholder">
-          <strong>✏️ Add local SPCA info</strong>
-          Website and phone number for your local SPCA or humane society.
-        </div>
-        <div class="sidebar-placeholder">
-          <strong>✏️ Add emergency vet clinics</strong>
-          List 1–2 nearby 24-hour emergency vets with phone and address.
-        </div>
-      </div>
-    </div>
 
-    <!-- DOGS AND COYOTES -->
-    <div class="sidebar-card">
-      <div class="sidebar-header teal">
-        <span class="sidebar-icon">🐶</span>
-        <span class="sidebar-title">Dogs &amp; Coyotes</span>
-      </div>
-      <div class="sidebar-body">
+        <h4>📍 Local Organizations</h4>
+        <ul class="resource-list">
+          <li>
+            <a class="resource-link" href="https://www.blueskyreserve.org" target="_blank">
+              <span class="link-icon">🔗</span>
+              <span>
+                Friends of Blue Sky Canyon
+                <span class="link-desc">Trails, ranger programs, and nature info for the Blue Sky Ecological Reserve</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="resource-link" href="https://sdhumane.org/programs/project-wildlife/" target="_blank">
+              <span class="link-icon">🔗</span>
+              <span>
+                SD Humane — Project Wildlife
+                <span class="link-desc">San Diego's primary wildlife rehabilitation and coexistence program</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="resource-link" href="https://resources.sdhumane.org/Resource_Center/Educational_Materials/Coexisting_with_Wildlife/Coyotes" target="_blank">
+              <span class="link-icon">🔗</span>
+              <span>
+                SD Humane — Coexisting with Coyotes
+                <span class="link-desc">Detailed tips on keeping pets safe and discouraging coyotes from your yard</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="resource-link" href="https://animalcenter.org/pet-adoption/" target="_blank">
+              <span class="link-icon">🔗</span>
+              <span>
+                Helen Woodward Animal Center
+                <span class="link-desc">No-kill adoption center in Rancho Santa Fe</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+
+        <h4>🐶 Dogs &amp; Coyotes</h4>
         <ul class="resource-list">
           <li>
             <a class="resource-link" href="https://www.dogtales.ca/10-ways-to-protect-your-dog-from-coyotes" target="_blank">
@@ -712,16 +733,8 @@
             </a>
           </li>
         </ul>
-      </div>
-    </div>
 
-    <!-- CATS AND PREDATORS -->
-    <div class="sidebar-card">
-      <div class="sidebar-header teal">
-        <span class="sidebar-icon">🐱</span>
-        <span class="sidebar-title">Cats &amp; Predators</span>
-      </div>
-      <div class="sidebar-body">
+        <h4>🐱 Cats &amp; Predators</h4>
         <ul class="resource-list">
           <li>
             <a class="resource-link" href="https://www.feralcats.com/cats-and-coyotes" target="_blank">
@@ -742,16 +755,8 @@
             </a>
           </li>
         </ul>
-      </div>
-    </div>
 
-    <!-- ADDITIONAL HAZARDS -->
-    <div class="sidebar-card">
-      <div class="sidebar-header teal">
-        <span class="sidebar-icon">⚠️</span>
-        <span class="sidebar-title">Additional Hazards</span>
-      </div>
-      <div class="sidebar-body">
+        <h4>⚠️ Additional Hazards</h4>
         <ul class="resource-list">
           <li>
             <a class="resource-link" href="https://animalvisioncenterva.com/on-woodsy-walks-be-sure-to-check-your-dog-for-ticks/" target="_blank">
@@ -772,10 +777,9 @@
             </a>
           </li>
         </ul>
+
       </div>
     </div>
-
-  </aside>
 
 </div><!-- end .page-wrapper -->
 
