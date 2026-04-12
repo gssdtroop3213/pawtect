@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to PAWtect Your Fur Babies — Full Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #2a9d8f;
+    --teal-dark: #1d7a6e;
+    --teal-light: #e8f7f5;
+    --gold: #e9c46a;
+    --gold-dark: #c9a94a;
+    --coral: #e76f51;
+    --navy: #1a2e3b;
+    --warm-white: #fdfaf5;
+    --text: #2c3e35;
+    --muted: #5a7268;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--warm-white);
+    color: var(--text);
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  /* HEADER */
+  header {
+    background: var(--teal);
+    color: white;
+    padding: 2.5rem 1.5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 50%;
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: -30px;
+    width: 160px; height: 160px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+  }
+  .paw-emoji { font-size: 2rem; display: block; margin-bottom: 0.5rem; }
+  header h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: clamp(2rem, 6vw, 3rem);
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+  }
+  header h1 span { color: var(--gold); }
+  .tagline {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0.9;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .scout-badge {
+    display: inline-block;
+    margin-top: 1.25rem;
+    background: rgba(255,255,255,0.15);
+    border: 1.5px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 0.35rem 1rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* NAV PILLS */
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 1.25rem 1rem;
+    background: white;
+    border-bottom: 2px solid #eef2f0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  nav a {
+    text-decoration: none;
+    color: var(--teal-dark);
+    background: var(--teal-light);
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    transition: all 0.18s;
+    border: 1.5px solid transparent;
+  }
+  nav a:hover {
+    background: var(--teal);
+    color: white;
+    border-color: var(--teal);
+  }
+
+  /* MAIN LAYOUT */
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  /* SECTION CARDS */
+  .section-card {
+    background: white;
+    border-radius: 16px;
+    margin-bottom: 2.25rem;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    border: 1.5px solid #eef2f0;
+  }
+  .section-header {
+    padding: 1.1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .section-header.teal { background: var(--teal); color: white; }
+  .section-header.gold { background: var(--gold); color: var(--navy); }
+  .section-header.coral { background: var(--coral); color: white; }
+  .section-header.navy { background: var(--navy); color: white; }
+  .section-header.green { background: #52b788; color: white; }
+
+  .section-icon { font-size: 1.5rem; flex-shrink: 0; }
+  .section-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.35rem;
+    letter-spacing: 0.02em;
+  }
+  .section-body { padding: 1.5rem; }
+
+  h3 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.1rem;
+    color: var(--teal-dark);
+    margin: 1.25rem 0 0.5rem;
+    letter-spacing: 0.02em;
+  }
+  h3:first-child { margin-top: 0; }
+
+  p { margin-bottom: 0.85rem; }
+  p:last-child { margin-bottom: 0; }
+
+  /* CALLOUT BOXES */
+  .callout {
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    margin: 1rem 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .callout.tip {
+    background: #fff8e1;
+    border-left: 4px solid var(--gold-dark);
+    color: #6b4f10;
+  }
+  .callout.warning {
+    background: #fff0ec;
+    border-left: 4px solid var(--coral);
+    color: #7a2d1a;
+  }
+  .callout.info {
+    background: var(--teal-light);
+    border-left: 4px solid var(--teal);
+    color: var(--teal-dark);
+  }
+  .callout-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.3rem;
+  }
+
+  /* LISTS */
+  ul, ol {
+    padding-left: 1.4rem;
+    margin-bottom: 0.85rem;
+  }
+  li { margin-bottom: 0.4rem; }
+  li:last-child { margin-bottom: 0; }
+
+  /* VET FILL-IN */
+  .vet-box {
+    background: #f7fffe;
+    border: 2px dashed var(--teal);
+    border-radius: 12px;
+    padding: 1.1rem 1.25rem;
+    margin-top: 1rem;
+  }
+  .vet-box p {
+    font-weight: 800;
+    font-size: 0.9rem;
+    color: var(--teal-dark);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .vet-field {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+  .vet-field label { min-width: 80px; color: var(--muted); font-weight: 700; }
+  .vet-field input {
+    flex: 1;
+    border: none;
+    border-bottom: 2px solid var(--teal);
+    padding: 0.25rem 0.1rem;
+    background: transparent;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text);
+    outline: none;
+  }
+  .vet-field input:focus { border-bottom-color: var(--gold-dark); }
+
+  /* RESOURCE LINKS */
+  .resource-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+  }
+  .resource-list li {
+    margin-bottom: 0.6rem;
+  }
+  .resource-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 0.6rem 0.85rem;
+    background: var(--teal-light);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--teal-dark);
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: background 0.15s;
+    border: 1.5px solid #c6e8e4;
+  }
+  .resource-link:hover { background: #d0f0ea; }
+  .resource-link .link-icon { font-size: 1rem; flex-shrink: 0; margin-top: 0.05rem; }
+  .resource-link .link-desc {
+    font-weight: 400;
+    color: var(--muted);
+    font-size: 0.82rem;
+    display: block;
+    margin-top: 0.1rem;
+  }
+
+  /* PLACEHOLDER STYLES */
+  .placeholder {
+    border: 2px dashed #c8d8d4;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    background: #f9fdfc;
+    color: var(--muted);
+    font-style: italic;
+    font-size: 0.9rem;
+    margin: 0.75rem 0;
+  }
+  .placeholder strong {
+    display: block;
+    font-style: normal;
+    font-weight: 800;
+    color: var(--teal-dark);
+    margin-bottom: 0.25rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* STATS */
+  .stat-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+  }
+  .stat-box {
+    flex: 1;
+    min-width: 130px;
+    background: var(--teal-light);
+    border-radius: 12px;
+    padding: 0.9rem 1rem;
+    text-align: center;
+    border: 1.5px solid #c6e8e4;
+  }
+  .stat-number {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.8rem;
+    color: var(--teal-dark);
+    line-height: 1;
+    display: block;
+  }
+  .stat-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--muted);
+    margin-top: 0.25rem;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.75);
+    text-align: center;
+    padding: 2rem 1.5rem;
+    font-size: 0.85rem;
+  }
+  footer .footer-title {
+    font-family: 'Fredoka One', cursive;
+    color: var(--gold);
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+  }
+  footer a { color: var(--gold); text-decoration: none; font-weight: 700; }
+  .paw-row { margin-top: 1rem; font-size: 1.2rem; letter-spacing: 0.3rem; opacity: 0.5; }
+
+  @media (max-width: 520px) {
+    .section-body { padding: 1.1rem; }
+    .stat-box { min-width: 100px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <span class="paw-emoji">🐾</span>
+  <h1>How to <span>PAWtect</span><br>Your Fur Babies</h1>
+  <p class="tagline">Your full guide to keeping dogs safe from local wildlife in Carmel Valley and surrounding San Diego communities.</p>
+  <span class="scout-badge">🌟 Girl Scout Cadette Silver Award Project · Troop #3213</span>
+</header>
+
+<!-- NAV -->
+<nav>
+  <a href="#wildlife">Wildlife Risks</a>
+  <a href="#prevention">Prevention Tips</a>
+  <a href="#during">During an Encounter</a>
+  <a href="#after">After an Encounter</a>
+  <a href="#resources">Resources</a>
+</nav>
+
+<main>
+
+  <!-- INTRO -->
+  <div class="section-card">
+    <div class="section-header navy">
+      <span class="section-icon">👋</span>
+      <span class="section-title">About This Guide</span>
+    </div>
+    <div class="section-body">
+      <p>We're three Girl Scout Cadettes from Troop 3213 working on our Silver Award project. We talked to rangers at Blue Sky Ecological Reserve and did a lot of research to put this together. This guide goes deeper than the brochure. Everything here is meant to help you take action — before, during, and after an encounter with local wildlife.</p>
+
+      <div class="placeholder">
+        <strong>✏️ Girls — add your names and a short intro here!</strong>
+        "Hi, we're Abbey, Kathleen, and Kylie, and here's why we decided to do this project..." Keep it to 3–4 sentences. Your voice makes this better.
+      </div>
+    </div>
+  </div>
+
+  <!-- WILDLIFE RISKS -->
+  <div class="section-card" id="wildlife">
+    <div class="section-header coral">
+      <span class="section-icon">⚠️</span>
+      <span class="section-title">Wildlife Risks in Our Area</span>
+    </div>
+    <div class="section-body">
+      <p>Carmel Valley backs up against open space. That's part of what makes it great to live here — it also means coyotes, snakes, and other wildlife are genuinely close by, not just occasionally.</p>
+
+      <h3>🐺 Coyotes</h3>
+      <p>Coyotes are the biggest threat to dogs in this area. They're smart, fast, and they've learned to live near people. Small dogs are most at risk, but coyotes have gone after medium-sized dogs too.</p>
+      <p>They're most active at dusk and dawn, but that's not the only time you'll see them. Spring is especially risky — coyotes protecting pups are more aggressive than usual.</p>
+
+      <div class="callout warning">
+        <div class="callout-label">⚡ High-Risk Times</div>
+        Coyote attacks on dogs spike in spring (pupping season, roughly March–June) and again when food is scarce in late summer/fall. Dawn and dusk walks carry extra risk year-round.
+      </div>
+
+      <div class="placeholder">
+        <strong>✏️ Add here — Ranger or vet interview notes about coyotes</strong>
+        What did the Blue Sky Reserve rangers tell you about how often they see coyotes near neighborhoods? Any specific spots to watch out for? Add 2–3 sentences of what you learned firsthand.
+      </div>
+
+      <h3>🐍 Snakes</h3>
+      <p>Rattlesnakes are around in our area, especially on rocky or sunny trails. They're more active in summer when they need warmth. Most snake encounters happen when a dog goes sniffing into bushes or off-trail.</p>
+
+      <div class="callout tip">
+        <div class="callout-label">💡 Trail tip</div>
+        Keep your dog on-leash and on the path. Most snake bites on dogs happen when the dog wanders into tall grass or reaches into rocks.
+      </div>
+
+      <h3>🌿 Poison Oak</h3>
+      <p>"Leaves of three, leave it be" — but poison oak changes color by season. It's green in spring and summer (easy to miss), red and orange in fall. Your dog can carry the oils home on their fur and transfer it to you without ever showing symptoms themselves.</p>
+
+      <div class="placeholder">
+        <strong>✏️ Add a photo or image description here</strong>
+        A simple labeled photo of green poison oak (summer) vs. red (fall) would really help people identify it. If you found a good public-domain image, this is where to put it.
+      </div>
+
+      <h3>🕷️ Ticks</h3>
+      <p>Ticks are common in tall grass and brush. They can carry Lyme disease and other illnesses. After every trail walk, run your hands through your dog's fur — especially around the ears, neck, armpits, and between toes.</p>
+
+      <div class="stat-row">
+        <div class="stat-box">
+          <span class="stat-number">🌸</span>
+          <div class="stat-label">Spring: highest coyote aggression (pupping season)</div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">☀️</span>
+          <div class="stat-label">Summer: snake activity peaks</div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">🌅</span>
+          <div class="stat-label">Dawn &amp; dusk: highest coyote activity</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PREVENTION -->
+  <div class="section-card" id="prevention">
+    <div class="section-header teal">
+      <span class="section-icon">🛡️</span>
+      <span class="section-title">Prevention Tips</span>
+    </div>
+    <div class="section-body">
+      <p>Most encounters are preventable. These habits make a real difference.</p>
+
+      <h3>Carry a bag on every walk</h3>
+      <p>Always bring a plastic bag. If a coyote comes toward you, swing it through the air so it fills up and makes a loud whooshing sound. It sounds silly, but it works. Coyotes find the sudden movement and noise startling and will usually back off.</p>
+
+      <h3>Watch your dog the entire time they're outside</h3>
+      <p>Even a quick bathroom break in the backyard is enough. Coyotes are fast and quiet. Don't assume your yard is safe just because it's fenced — coyotes can clear a 6-foot fence.</p>
+
+      <div class="callout warning">
+        <div class="callout-label">⚡ Important</div>
+        Never leave small dogs outside unsupervised, even for a few minutes. Coyotes have taken dogs from fenced yards and patios in San Diego.
+      </div>
+
+      <h3>Make yourself look big</h3>
+      <p>If a coyote gets close: pick up your dog if they're small enough, raise your arms wide above your head, and use a loud, firm voice. You want to look like a threat, not prey. Most coyotes will retreat.</p>
+
+      <div class="placeholder">
+        <strong>✏️ Abbey — add any additional tips you found in your research</strong>
+        Did the rangers or vet mention anything about coyote-proof fencing, motion lights, or other prevention tools people can use at home? 2–3 sentences here.
+      </div>
+
+      <h3>Save your emergency vet info now</h3>
+      <p>Don't wait until after something happens to look this up. Fill it in below and bookmark this page.</p>
+
+      <div class="vet-box">
+        <p>📋 My Emergency Vet Info</p>
+        <div class="vet-field">
+          <label>Vet Name</label>
+          <input type="text" placeholder="e.g. VCA Emergency Animal Hospital">
+        </div>
+        <div class="vet-field">
+          <label>Phone</label>
+          <input type="tel" placeholder="(858) 555-0000">
+        </div>
+        <div class="vet-field">
+          <label>Address</label>
+          <input type="text" placeholder="Street address">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DURING -->
+  <div class="section-card" id="during">
+    <div class="section-header gold">
+      <span class="section-icon">🚨</span>
+      <span class="section-title">During a Wildlife Encounter</span>
+    </div>
+    <div class="section-body">
+      <p>What you do in the first few seconds matters. Stay calm — your dog reads your energy. If you panic, they panic.</p>
+
+      <h3>If the coyote is hunting</h3>
+      <p>It probably isn't after you or your dog specifically. Still — don't wait to find out. Haze it immediately: loud voice, big arms, swing that bag. Give it an easy reason to leave. It will.</p>
+
+      <h3>If the coyote is patrolling territory (spring)</h3>
+      <p>Do NOT try to scare it off. A coyote protecting pups near a den is a different situation entirely. It's not going to be deterred the same way, and trying to haze it could push it toward aggression.</p>
+      <p>Instead: pull your dog in tight (or pick them up), keep walking at a calm, normal pace, and don't make direct eye contact. The coyote will stop following once you've moved past its territory boundary.</p>
+
+      <div class="callout info">
+        <div class="callout-label">ℹ️ How to tell the difference</div>
+        A hunting coyote moves purposefully and may be tracking something other than you. A territorial coyote will pace parallel to you, follow at a fixed distance, or position itself between you and a specific area (likely near a den). If it's doing the latter, don't push it — just leave calmly.
+      </div>
+
+      <h3>If your dog tries to chase</h3>
+      <p>Hold the leash firmly and don't let them get close. This is one of the most dangerous scenarios — dogs that chase coyotes sometimes get drawn into the pack. Don't let go of the leash for any reason.</p>
+
+      <div class="placeholder">
+        <strong>✏️ Kathleen — anything from your ranger interview to add here?</strong>
+        Did the rangers give specific advice about what to do in Carmel Valley trails specifically? Any local knowledge about where territorial coyotes tend to be? Add it here.
+      </div>
+    </div>
+  </div>
+
+  <!-- AFTER -->
+  <div class="section-card" id="after">
+    <div class="section-header green">
+      <span class="section-icon">🩺</span>
+      <span class="section-title">After a Wildlife Encounter</span>
+    </div>
+    <div class="section-body">
+      <p>If your dog was attacked, the priority is getting them to a vet fast — even if the injury looks minor. Coyote bites can cause serious puncture wounds that aren't obvious under fur, and infection risk is high.</p>
+
+      <h3>Right after the attack</h3>
+      <ol>
+        <li>Apply gentle pressure to any bleeding wound with a clean cloth.</li>
+        <li>Call the nearest emergency vet clinic before you arrive so they're ready.</li>
+        <li>Get there as fast as you safely can.</li>
+      </ol>
+
+      <div class="callout warning">
+        <div class="callout-label">⚡ Don't skip the vet</div>
+        Even if your dog seems okay, go. Coyote bite wounds can be deeper than they look and carry a high infection risk. Rabies exposure also needs to be evaluated by a professional.
+      </div>
+
+      <h3>Life after the attack</h3>
+      <p>About 50% of dogs show behavioral changes after a coyote attack. This is normal. Watch for:</p>
+      <ul>
+        <li>Refusing to return to where the attack happened</li>
+        <li>Anxiety or fearfulness outdoors in general</li>
+        <li>Disrupted sleep or night terrors</li>
+      </ul>
+
+      <p>These behaviors can get better with time and patience. One approach that helps: treat-based conditioning. Start by rewarding your dog for being comfortable near (but not at) the location of the attack. Gradually close the distance over days or weeks, always rewarding calm behavior. Don't rush it.</p>
+
+      <div class="placeholder">
+        <strong>✏️ Kylie — add more recovery detail here</strong>
+        Did you find any sources on canine trauma recovery or talk to a vet about behavioral rehab after attacks? Add 2–3 more sentences here about what you learned. A vet quote would be great if you got one.
+      </div>
+
+      <div class="vet-box">
+        <p>📋 My Emergency Vet Info</p>
+        <div class="vet-field">
+          <label>Vet Name</label>
+          <input type="text" placeholder="e.g. VCA Emergency Animal Hospital">
+        </div>
+        <div class="vet-field">
+          <label>Phone</label>
+          <input type="tel" placeholder="(858) 555-0000">
+        </div>
+        <div class="vet-field">
+          <label>Address</label>
+          <input type="text" placeholder="Street address">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESOURCES -->
+  <div class="section-card" id="resources">
+    <div class="section-header navy">
+      <span class="section-icon">🔗</span>
+      <span class="section-title">Resources</span>
+    </div>
+    <div class="section-body">
+      <p>Good places to go for more information. These are reputable sources — not random blogs.</p>
+
+      <h3>Local Resources</h3>
+      <ul class="resource-list">
+        <li>
+          <div class="placeholder" style="margin:0;">
+            <strong>✏️ Add Blue Sky Ecological Reserve contact info</strong>
+            Website, ranger line, or trail conditions number. This is one of your partners — link them!
+          </div>
+        </li>
+        <li>
+          <div class="placeholder" style="margin:0; margin-top: 0.5rem;">
+            <strong>✏️ Add SPCA San Diego info</strong>
+            Website and adoption info — you're partnering with them for distribution, so include their link.
+          </div>
+        </li>
+        <li>
+          <div class="placeholder" style="margin:0; margin-top: 0.5rem;">
+            <strong>✏️ Add local emergency vet clinics</strong>
+            List 1–2 of the closest 24-hour emergency vets to Carmel Valley with their phone numbers and addresses.
+          </div>
+        </li>
+      </ul>
+
+      <h3>Coyote Safety</h3>
+      <ul class="resource-list">
+        <li>
+          <a class="resource-link" href="https://www.humanesociety.org/resources/coexisting-coyotes" target="_blank">
+            <span class="link-icon">🔗</span>
+            <span>
+              Humane Society — Coexisting with Coyotes
+              <span class="link-desc">General guidance on coyote behavior and hazing techniques</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="resource-link" href="https://www.wildlife.ca.gov/Living-with-Wildlife/Coyotes" target="_blank">
+            <span class="link-icon">🔗</span>
+            <span>
+              California Department of Fish and Wildlife — Coyotes
+              <span class="link-desc">State-specific info on coyote behavior and what to do if one approaches</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <div class="placeholder" style="margin:0; margin-top: 0.5rem;">
+            <strong>✏️ Add any other sources you used in your research</strong>
+            If you found any articles, studies, or websites that gave you the statistics in this guide (like the 50% behavioral change figure), link them here.
+          </div>
+        </li>
+      </ul>
+
+      <h3>Snakes & Ticks</h3>
+      <ul class="resource-list">
+        <li>
+          <div class="placeholder" style="margin:0;">
+            <strong>✏️ Add 1–2 snake safety resources</strong>
+            Look for UC Cooperative Extension or the San Diego Natural History Museum — they have good local info on rattlesnakes.
+          </div>
+        </li>
+        <li>
+          <div class="placeholder" style="margin:0; margin-top: 0.5rem;">
+            <strong>✏️ Add a tick prevention resource</strong>
+            Your vet or a trusted pet health site (like AKC or AVMA) would work here.
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-title">🐾 PAWtect</div>
+  <p><em>Protecting Pets. Empowering Communities.</em></p>
+  <p style="margin-top: 0.5rem;">Created by Girl Scout Cadettes · Silver Award Project · Troop #3213 · San Diego, California</p>
+  <div class="paw-row">🐾 🐾 🐾</div>
+</footer>
+
+</body>
+</html>
